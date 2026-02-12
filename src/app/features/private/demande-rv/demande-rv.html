@@ -1,0 +1,42 @@
+<section class="demande-rv">
+	<h2>Demande de rendez‑vous</h2>
+	<p>Remplissez le formulaire ci‑dessous pour demander un rendez‑vous. Nous vous recontacterons pour confirmer la date et l'heure.</p>
+
+	<form class="demande-form" (ngSubmit)="submit()" #f="ngForm" novalidate>
+		<div class="field">
+			<label for="nom">Nom complet</label>
+			<input id="nom" name="nom" type="text" placeholder="Ex. Marie Dupont" required [(ngModel)]="model.nom" />
+		</div>
+
+		<div class="field">
+			<label for="tel">Téléphone</label>
+			<input id="tel" name="tel" type="tel" placeholder="Ex. 06 12 34 56 78" required [(ngModel)]="model.tel" />
+		</div>
+
+		<div class="field">
+			<label for="email">Email</label>
+			<input id="email" name="email" type="email" placeholder="exemple@domaine.com" [(ngModel)]="model.email" />
+		</div>
+
+		<div class="field-row">
+			<div class="field">
+				<label for="date">Date souhaitée</label>
+				<input id="date" name="date" type="date" [(ngModel)]="model.date" />
+			</div>
+			<div class="field">
+				<label for="heure">Heure souhaitée</label>
+				<input id="heure" name="heure" type="time" [(ngModel)]="model.heure" />
+			</div>
+		</div>
+
+		<div class="field">
+			<label for="motif">Motif de la consultation</label>
+			<textarea id="motif" name="motif" rows="4" placeholder="Décrivez brièvement la raison du rendez‑vous" [(ngModel)]="model.motif"></textarea>
+		</div>
+
+		<div class="actions">
+			<button type="submit" [disabled]="!f.form.valid">Envoyer la demande</button>
+			<button type="button" (click)="model = { nom: '', tel: '', email: '', date: '', heure: '', motif: '' }">Réinitialiser</button>
+		</div>
+	</form>
+</section>

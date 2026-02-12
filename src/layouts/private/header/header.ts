@@ -1,9 +1,11 @@
 
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-header-private',
   standalone: true,
+  imports: [RouterModule],
   templateUrl: './header.html',
   styleUrls: ['./header.css'],
 })

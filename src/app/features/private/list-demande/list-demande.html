@@ -1,0 +1,85 @@
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="h4"><i class="bi bi-list-ul"></i> Mes Demandes de RV</h2>
+            <a routerLink="/form-demande" class="btn btn-primary"><i class="bi bi-plus-lg"></i> Nouvelle Demande
+        </a>
+    </div>
+
+    <div class="row g-3 mb-4">
+        <div class="col-md-5">
+            <label class="form-label text-muted small">Filtrer par statut</label>
+            <select class="form-select">
+                <option selected>Tous les statuts</option>
+            </select>
+        </div>
+        <div class="col-md-5">
+            <label class="form-label text-muted small">Filtrer par spécialité</label>
+            <select class="form-select">
+                <option selected>Toutes les spécialités</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="card border-0 shadow-sm">
+        <div class="table-responsive">
+            <table class="table align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th class="py-3">Spécialité</th>
+                        <th><i class="bi bi-calendar3"></i> Date Demandée</th>
+                        <th><i class="bi bi-clock"></i> Heure</th>
+                        <th><i class="bi bi-info-circle"></i> Statut</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="fw-bold">Cardiologue</td>
+                        <td>25/01/2026</td>
+                        <td>14:30</td>
+                        <td><span class="badge bg-warning text-dark">En attente</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-eye"></i> Voir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">Médecin Généraliste</td>
+                        <td>22/01/2026</td>
+                        <td>10:00</td>
+                        <td><span class="badge bg-success">Accepté</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-eye"></i> Voir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">Dermatologue</td>
+                        <td>28/01/2026</td>
+                        <td>16:00</td>
+                        <td><span class="badge bg-warning text-dark">En attente</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-eye"></i> Voir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">Oculiste</td>
+                        <td>20/01/2026</td>
+                        <td>09:30</td>
+                        <td><span class="badge bg-danger">Refusé</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-eye"></i> Voir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <nav class="mt-4">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="#">Précédent</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">Suivant</a></li>
+        </ul>
+    </nav>
+</div>

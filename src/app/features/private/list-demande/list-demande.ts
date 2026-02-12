@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-list-demande',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './list-demande.html',
   styleUrl: './list-demande.css',
 })

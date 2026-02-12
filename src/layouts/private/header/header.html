@@ -1,6 +1,7 @@
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav class=
+  "navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="dashboard.html">
+            <a class="navbar-brand" routerLink="/private/dash">
                 <i class="bi bi-hospital"></i> Gestion RV Médicaux
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -9,19 +10,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="/dash"><i class="bi bi-speedometer2"></i> Tableau de bord</a>
+                        <a class="nav-link" routerLink="/private/dash" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="bi bi-speedometer2"></i> Tableau de bord</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="create-patient.html"><i class="bi bi-person-plus"></i> Nouveau Patient</a>
+                        <a class="nav-link" routerLink="/public/patients" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="bi bi-person-plus"></i> Nouveau Patient</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" routerLink="form-demande"><i class="bi bi-calendar-event"></i> Demander RV</a>
+                        <a class="nav-link" routerLink="/private/form-demande" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="bi bi-calendar-event"></i> Demander RV</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="demandes-rv.html"><i class="bi bi-list-check"></i> Mes Demandes</a>
+                        <a class="nav-link" routerLink="/private/list-demande-rv" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="bi bi-list-check"></i> Liste des Demandes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="mes-rv.html"><i class="bi bi-calendar-check"></i> Mes RV</a>
+                        <a class="nav-link" routerLink="/private/drv" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="bi bi-calendar-check"></i> Mes RV</a>
                     </li>
                 </ul>
                 <div class="d-flex">
@@ -30,10 +31,10 @@
                             <i class="bi bi-person-circle"></i> Patient
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="patients-list.html"><i class="bi bi-people"></i> Mes Informations</a></li>
+                            <li><a class="dropdown-item" routerLink="/public/patients"><i class="bi bi-people"></i> Mes Informations</a></li>
                             <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Paramètres</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="index.html"><i class="bi bi-box-arrow-right"></i> Déconnexion</a></li>
+                            <li><a class="dropdown-item" routerLink="/"><i class="bi bi-box-arrow-right"></i> Déconnexion</a></li>
                         </ul>
                     </div>
                 </div>
